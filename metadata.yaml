@@ -1,0 +1,10 @@
+name: astrbot_plugin_qq_book_search
+display_name: QQ 群找书
+short_desc: 在 QQ 群按最新搜索书籍，仅回传 TXT 并自动撤回过程消息。
+desc: 在配置的 QQ 群中使用 /找书 书名，插件通过已授权的账号向书籍服务查询书籍，接收序号后下载 TXT 并回传 QQ，成功后自动撤回过程中的全部文字消息。内置成人内容过滤与每日下载额度。仅处理用户有权获取或转发的公开内容。
+author: kkiki11
+version: 0.2.0
+support_platforms:
+  - aiocqhttp
+astrbot_version: ">=4.26.0,<5"
+repo: https://github.com/kkiki11/astrbot_plugin_qq_book_search

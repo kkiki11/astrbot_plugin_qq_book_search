@@ -1,0 +1,23 @@
+# 账号授权文件（严禁提交）
+*.session
+*.session-journal
+*.session-shm
+*.session-wal
+*.session.source.sha256
+
+# 插件运行状态与临时下载目录
+download_quota.json
+temporary_files/
+book_downloads/
+data/
+
+# Python 与工具缓存
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+
+# 本地环境
+.venv/
+.env
+.env.*

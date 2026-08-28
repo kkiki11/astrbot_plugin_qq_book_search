@@ -1,0 +1,90 @@
+{
+  "book_source_group_ids": {
+    "type": "list",
+    "item_type": "string",
+    "description": "允许找书的 QQ 群号",
+    "hint": "仅这些 QQ 群能使用 /找书 书名；例如 [\"428568485\"]。",
+    "default": []
+  },
+  "api_id": {
+    "type": "int",
+    "description": "App API ID",
+    "hint": "从 my.telegram.org 的 API development tools 获取；应与 api_hash 属于同一个应用。",
+    "default": 0
+  },
+  "api_hash": {
+    "type": "string",
+    "description": "App API Hash",
+    "hint": "同一应用中的 32 位十六进制 API Hash；不要填写 Bot Token。",
+    "obvious_hint": true,
+    "default": ""
+  },
+  "telegram_session": {
+    "type": "file",
+    "description": "账号授权 Session 文件",
+    "hint": "可留空以复用已有转发插件的授权文件，或上传已授权的 .session 文件。切勿分享。",
+    "default": [],
+    "file_types": ["session"]
+  },
+  "book_search_bot": {
+    "type": "string",
+    "description": "书籍服务账号",
+    "hint": "默认 @sobook；应为已登录账号能够正常访问的公开用户名。",
+    "default": "@sobook"
+  },
+  "prefer_latest_sort": {
+    "type": "bool",
+    "description": "优先按最新排序",
+    "hint": "搜索后自动点击“最新”按钮；默认开启。",
+    "default": true
+  },
+  "txt_only": {
+    "type": "bool",
+    "description": "仅保留 TXT 格式结果",
+    "hint": "默认开启。过滤 EPUB、MOBI、AZW3、PDF 等格式；无法识别格式的条目仍会保留，下载时会再次校验。",
+    "default": true
+  },
+  "adult_filter_enabled": {
+    "type": "bool",
+    "description": "过滤成人与 18+ 内容",
+    "hint": "默认开启；匹配标题或列表详情中的成人关键词后不会显示、也无法选择。",
+    "default": true
+  },
+  "adult_filter_keywords": {
+    "type": "list",
+    "item_type": "string",
+    "description": "成人内容过滤关键词",
+    "hint": "可按需追加；内置关键词始终与已保存的旧配置合并，覆盖常见成人和 18+ 标记。",
+    "default": ["18+", "18禁", "r18", "成人", "情色", "色情", "nsfw", "h文", "h小说", "rbq", "np", "sm", "bdsm", "调教", "总受", "强制爱", "强制", "性奴", "肉文", "巨乳", "阴道", "抽插", "乳", "呻吟", "小", "舌头", "加料", "大鸡", "高潮", "潮", "淫", "粗", "穴", "刘备", "校花", "龟头", "肉棒", "口交", "娇躯", "母狗", "乳头"]
+  },
+  "adult_filter_threshold": {
+    "type": "int",
+    "description": "成人内容风险阈值",
+    "hint": "范围 1–12，默认 3。数值越高越宽松；🔞 分级标记不受此阈值影响，始终过滤。",
+    "default": 3
+  },
+  "daily_download_limit": {
+    "type": "int",
+    "description": "每日下载上限（本）",
+    "hint": "范围 1–1000，默认 50。跨自然日自动重置；额度在文件成功回传后扣除。",
+    "default": 50
+  },
+  "auto_recall_messages": {
+    "type": "bool",
+    "description": "下载完成后撤回过程消息",
+    "hint": "默认开启。成功回传文件后，撤回用户命令、提示语与结果列表，仅保留文件。需要机器人具备群管理权限才能撤回他人消息。",
+    "default": true
+  },
+  "book_search_timeout_seconds": {
+    "type": "int",
+    "description": "等待搜索或下载超时（秒）",
+    "hint": "范围 15–180 秒。服务明确返回空结果时会立即结束等待，无需等满该时长。",
+    "default": 45
+  },
+  "max_book_file_size_mb": {
+    "type": "int",
+    "description": "TXT 文件最大大小（MB）",
+    "hint": "下载后通过 QQ 回传的单文件上限，范围 1–512 MB。",
+    "default": 50
+  }
+}
