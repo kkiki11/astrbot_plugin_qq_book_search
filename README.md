@@ -18,7 +18,7 @@ kkiki11/astrbot_plugin_qq_book_search
 
 | 配置项 | 内容 |
 |---|---|
-| `book_source_group_ids` | 允许使用找书功能的 QQ 群号，例如 `428568485`。 |
+| `book_source_group_ids` | 允许使用找书功能的 QQ 群号，例如 `123456789`。 |
 | `api_id` / `api_hash` | 与原转发插件相同的第三方服务应用凭据。 |
 | `telegram_session` | 通常可留空；插件启动时会自动复用原转发插件已有的授权文件，也可以单独上传 `.session` 文件。 |
 | `book_search_bot` | 默认 `@sobook`，无需修改。 |
